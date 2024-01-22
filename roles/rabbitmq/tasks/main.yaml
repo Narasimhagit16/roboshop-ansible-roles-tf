@@ -18,5 +18,18 @@
 - name: create rabbitmq user
   ansible.builtin.command: "rabbitmqctl add_user {{rq_user}} {{rq_password}}"
 
+- name: Add user to server and assign full access control on / vhost. The user might have permission rules for other vhost but you don't care.
+  community.rabbitmq.rabbitmq_user:
+    user: "{{ lookup('aws_ssm', '/roboshop/{{env}}/rabbitmq_user', decrypt=True, region= 'us-east-1' ) }}"
+    password: "{{ lookup('aws_ssm', '/roboshop/{{env}}/rabbitmq_password', decrypt=True, region= 'us-east-1' ) }}"
+    vhost: /
+    configure_priv: .*
+    read_priv: .*
+    write_priv: .*
+    state: present
+
+
+
+
 - name: set permissions
   ansible.builtin.command: rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
