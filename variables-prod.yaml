@@ -1,0 +1,10 @@
+MONGODB_HOST: mongodb-prod.nariops.online  # submit your host
+REDIS_HOST: redis-prod.nariops.online 
+MYSQL_HOST: mysql-prod.nariops.online 
+RABBITMQ_HOST: rabbitmq-prod.nariops.online 
+CATALOGUE_HOST: catalogue-prod.nariops.online 
+USER_HOST: user-prod.nariops.online 
+CART_HOST: cart-prod.nariops.online 
+SHIPPING_HOST: shipping-prod.nariops.online 
+PAYMENT_HOST: payment-prod.nariops.online 
+DISPATCH_HOST: dispatch-prod.nariops.online 
