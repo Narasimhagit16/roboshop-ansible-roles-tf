@@ -9,4 +9,4 @@ SHIPPING_HOST: shipping.app-dev.nariops.online
 PAYMENT_HOST: payment.app-dev.nariops.online 
 DISPATCH_HOST: dispatch.app-dev.nariops.online 
 NEXUS_URL: http://34.237.141.93:8081/repository
-group_id: "com.roboshop"
+group_id: "com/roboshop"
